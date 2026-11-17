@@ -1,0 +1,11 @@
+exemplos/
+node_modules/
+dist/
+dist-server/
+dados-local/
+.env
+*.log
+scripts/gerar-teste.ts
+scripts/testar-local.ts
+mcp/dist/
+scripts/testar-mcp.ts

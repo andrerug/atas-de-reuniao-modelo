@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Atas de Reunião</title>
+    <meta name="description" content="Lista de presença, gravação, pauta e pareceres viram a ata da reunião em Word." />
+    <meta name="theme-color" content="#F2F4F8" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script>
+      try {
+        var t = localStorage.getItem('tema-atas');
+        if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
+  </head>
+  <body class="av">
+    <a class="av-pular" href="#conteudo">Pular para o conteúdo</a>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

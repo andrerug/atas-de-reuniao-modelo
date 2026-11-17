@@ -1,0 +1,22 @@
+# Atas de Reunião na VPS (atas.seu-dominio.exemplo). Porta só no 127.0.0.1; o Caddy faz o https.
+# Chave do Gemini e Supabase em /etc/atas.env.
+services:
+  atas:
+    build: .
+    image: atas-de-reuniao:latest
+    container_name: atas
+    restart: unless-stopped
+    env_file:
+      - /etc/atas.env
+    environment:
+      - APP_URL=https://atas.seu-dominio.exemplo
+    ports:
+      - "127.0.0.1:3101:3000"
+    volumes:
+      - /var/lib/atas:/dados
+    mem_limit: 768m
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
